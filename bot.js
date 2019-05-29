@@ -122,3 +122,16 @@ if (message.content.startsWith(adminprefix + 'setava')) {
 
 
 client.login(process.env.BOT_TOKEN);
+
+
+client.on('message', function(message) {
+	const myID = "279317704475934720";
+    let args = message.content.split(" ").slice(1).join(" ");
+    if(message.content.startsWith(adminprefix + "setname")) {
+		        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اVC server.');
+        client.user.setUsername(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
