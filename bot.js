@@ -132,9 +132,9 @@ m.sendMessage(args)
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
-       $obc | لأرسال برود كاست للكل
-       $bc  |  لأرسال برود كاست للأونلاين
-       $adminbc | برودكاست عادي
+       .obc | لأرسال برود كاست للكل
+       .bc  |  لأرسال برود كاست للأونلاين
+       .adminbc | برودكاست عادي
        ** `)
    message.author.sendEmbed(embed)
    
