@@ -72,17 +72,17 @@ m.sendMessage(args)
   
   
   client.on("message", message => {
-    if (message.content === "$help") {
+    if (message.content === ".help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       .obc | لأرسال برود كاست للكل
+       $obc | لأرسال برود كاست للكل
 
-       .bc  |  لأرسال برود كاست للأونلاين
+       $bc  |  لأرسال برود كاست للأونلاين
 
-       .adminbc | برودكاست عادي
+       $adminbc | برودكاست عادي
 
        ** `)
    message.author.sendEmbed(embed)
