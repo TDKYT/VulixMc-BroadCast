@@ -19,6 +19,61 @@ client.on("message", message => {
   };
   });
 
+client.on('message', function(message) {
+	const myID = "279317704475934720";
+    let args = message.content.split(" ").slice(1).join(" ");
+    if(message.content.startsWith(adminprefix + "setname")) {
+		        if(message.author.id !== myID) return;
+            if(!args) return message.reply('VC server!.');
+        client.user.setUsername(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(adminprefix + "stream")) {
+		        if(message.author.id !== myID) return;
+            if(!args) return message.reply('VulixMC.');
+        client.user.setGame(args , 'https://twitch.tv/6xlez1');
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(adminprefix + "play")) {
+				        if(message.author.id !== myID) return;
+            if(!args) return message.reply('VC.');
+        client.user.setGame(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(adminprefix + "listen")) {
+				        if(message.author.id !== myID) return;
+            if(!args) return message.reply('VCBrodcast.');
+        client.user.setActivity(args, {type:'LISTENING'});
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(adminprefix + "watch")) {
+				        if(message.author.id !== myID) return;
+            if(!args) return message.reply('VC.');
+        client.user.setActivity(args, {type:'WATCHING'});
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(adminprefix + "setavatar")) {
+				        if(message.author.id !== myID) return;
+        client.user.setAvatar(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+                if(!args) return message.reply('VC.');
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    }
+});
+
+
 
 //bc online
 
@@ -123,15 +178,3 @@ if (message.content.startsWith(adminprefix + 'setava')) {
 
 client.login(process.env.BOT_TOKEN);
 
-
-client.on('message', function(message) {
-	const myID = "279317704475934720";
-    let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith(adminprefix + "setname")) {
-		        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اVC server.');
-        client.user.setUsername(args);
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
