@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = "."
-var adminprefix = '.'
+var adminprefix = '.a'
 
 
 //bc
@@ -77,13 +77,9 @@ m.sendMessage(args)
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
-
        $obc | لأرسال برود كاست للكل
-
        $bc  |  لأرسال برود كاست للأونلاين
-
        $adminbc | برودكاست عادي
-
        ** `)
    message.author.sendEmbed(embed)
    
@@ -125,4 +121,4 @@ if (message.content.startsWith(adminprefix + 'setava')) {
 });
 
 
-client.login('NTgzMDMwNDIzNjQzMzU3MjQ5.XO422g.FFMob_Rkm7vXd0ojEJfAxGzX9vI');
+client.login(process.env.BOT_TOKEN);
