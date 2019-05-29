@@ -2,7 +2,7 @@ const Discord = require("discord.js");
   const kboosh = new Discord.Client();
     const kbooshtoken = "MzI3NzM2NTMyOTMwOTIwNDUw.DGmnLA.QFbtYXPzTAvZsoFW70wNLyVm3lE"
       kboosh.on('ready', () => {
-        kboosh.user.setGame(`KBOOSH TEST Broadcast`,'https://www.twitch.tv/TEST-Broadcast');
+        kboosh.user.setGame(` Broadcast`,'https://www.twitch.tv/TEST-Broadcast');
           console.log('Im Ready!');
   
         });
@@ -45,4 +45,4 @@ const Discord = require("discord.js");
                             }
                           }
 });
-kboosh.login(NTgzMDMwNDIzNjQzMzU3MjQ5.XO2bxQ.yWxtwnSv4s3Fln7q1HTlFDMLVeY);
+kboosh.login('NTgzMDMwNDIzNjQzMzU3MjQ5.XO4uqw.NWFvqsIdmg3cF1apTxtYakKXGWQ');
